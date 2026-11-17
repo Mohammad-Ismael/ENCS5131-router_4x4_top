@@ -15,7 +15,7 @@ The hardware is divided into two distinct functional parts:
 
 ### 1.2 Internal Block Diagram
 
-While the RTL team has full freedom over internal module partitioning, a clean, modular implementation consists of four primary subsystems as illustrated below:
+A modular implementation consists of four primary subsystems as illustrated below:
 
 ```text
                         +---------------------------------------+
