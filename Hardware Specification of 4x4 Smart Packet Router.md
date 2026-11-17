@@ -15,7 +15,7 @@ The hardware is divided into two distinct functional parts:
 
 ### 1.2 Internal Block Diagram
 
-A modular implementation consists of four primary subsystems as illustrated below:
+A modular implementation of the `router_4x4_top` router might consist of four primary subsystems as illustrated below:
 
 ```text
                         +---------------------------------------+
