@@ -662,7 +662,7 @@ $$\text{Input } 0 \text{ (Highest)} > \text{Input } 1 > \text{Input } 2 > \text{
 * Each Output Port `j` maintains a 2-bit rotating priority pointer **`rr_ptr[j]`**, which resets to **`2'd0`** when `rst_n == 1'b0`.
 * When Output Port `j` is `IDLE` and one or more inputs request it, the arbiter scans inputs in circular order starting at `rr_ptr[j]`:
 
-$$\text{Order: } \quad \text{rr\_ptr}[j] \;\rightarrow\; (\text{rr\_ptr}[j] + 1) \bmod 4 \;\rightarrow\; (\text{rr\_ptr}[j] + 2) \bmod 4 \;\rightarrow\; (\text{rr\_ptr}[j] + 3) \bmod 4$$
+$$\text{Order: } \quad \text{rr\textunderscore ptr}[j] \;\rightarrow\; (\text{rr\textunderscore ptr}[j] + 1) \bmod 4 \;\rightarrow\; (\text{rr\textunderscore ptr}[j] + 2) \bmod 4 \;\rightarrow\; (\text{rr\textunderscore ptr}[j] + 3) \bmod 4$$
 
 
 * The first requesting input encountered in this circular scan wins the grant.
