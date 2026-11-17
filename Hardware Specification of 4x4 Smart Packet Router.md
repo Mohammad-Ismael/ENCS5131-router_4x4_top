@@ -2,7 +2,7 @@
 
 ## 1. Overview & Architecture
 
-### 1.1 Purpose & System Context
+### 1.1 Introduction
 
 The `router_4x4_top` is a **4-port packet switch** commonly found in Network-on-Chip (NoC) interconnects and network interface controllers. Its job is to accept variable-length byte packets arriving simultaneously on four independent input channels (`in_0` through `in_3`), inspect each packet's header to determine its destination and required processing, resolve traffic conflicts when multiple inputs target the same output, and transmit valid packets out of the four output channels (`out_0` through `out_3`).
 
