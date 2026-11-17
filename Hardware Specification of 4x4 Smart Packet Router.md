@@ -6,10 +6,10 @@
 
 The `router_4x4_top` is a **4-port packet switch** commonly found in Network-on-Chip (NoC) interconnects and network interface controllers. Its job is to accept variable-length byte packets arriving simultaneously on four independent input channels (`in_0` through `in_3`), inspect each packet's header to determine its destination and required processing, resolve traffic conflicts when multiple inputs target the same output, and transmit valid packets out of the four output channels (`out_0` through `out_3`).
 
-The hardware is divided into two distinct functional planes:
+The hardware is divided into two distinct functional parts:
 
-   1. **The Data Plane (Streaming Interfaces):** Four input ports and four output ports operating on an 8-bit (`1 byte/cycle`) `valid`/`ready` handshake protocol. All ports operate synchronously on the same system clock (`clk`).
-   2. **The Control & Telemetry Plane (APB3 Slave Interface):** A memory-mapped register interface (`psel`, `penable`, `pwrite`, `paddr`, `pwdata`, `prdata`) that allows a host CPU (or UVM testbench) to enable/disable ports, select arbitration algorithms, load encryption keys, read traffic/error statistics, and service interrupts (`irq`).
+   1. **The Data part (Streaming Interfaces):** Four input ports and four output ports operating on an 8-bit (`1 byte/cycle`) `valid`/`ready` handshake protocol. All ports operate synchronously on the same system clock (`clk`).
+   2. **The Control & Telemetry part (APB3 Slave Interface):** A memory-mapped register interface (`psel`, `penable`, `pwrite`, `paddr`, `pwdata`, `prdata`) that allows a host CPU (or UVM testbench) to enable/disable ports, select arbitration algorithms, load encryption keys, read traffic/error statistics, and service interrupts (`irq`).
 
 ---
 
